@@ -8,7 +8,7 @@
                     </div>
                     <timeline-list v-if="isExistMicroposts" :microposts="microposts"></timeline-list>
                     <div class="text-center" v-else>
-                        一件もありません
+                        一件もありません!!!
                     </div>
                 </div>
             </v-col>
