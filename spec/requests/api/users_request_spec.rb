@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Api::Users", type: :request do
-  describe 'POST /users' do
+  describe 'POST /api/users' do
     let(:user_params) { { user: { name: 'taro', email: 'taro@example.com', password: '12345678', password_confirmation: '12345678' } } }
     it 'ユーザーが作成できること' do
       post api_users_path, params: user_params
