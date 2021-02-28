@@ -1,9 +1,12 @@
 <template>
     <div>
-        <div class="mb-5">
+         <div class="mb-5" v-if="$store.getters['auth/currentUser']">
             <micropost-form @created="createMicropost"></micropost-form>
         </div>
-        <timeline-list :microposts="microposts"></timeline-list>
+        <timeline-list v-if="isExistMicroposts" :microposts="microposts"></timeline-list>
+        <div class="text-center" v-else>
+            一件もありません
+        </div>
     </div>
 </template> 
 
@@ -20,6 +23,11 @@
         components: {
             MicropostForm,
             TimelineList
+        },
+        computed: {
+            isExistMicroposts() {
+                return this.microposts.length > 0
+            }
         },
         created() {
             this.fetchMicroposts()
