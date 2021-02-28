@@ -1,13 +1,19 @@
 <template>
-    <div>
-         <div class="mb-5" v-if="$store.getters['auth/currentUser']">
-            <micropost-form @created="createMicropost"></micropost-form>
-        </div>
-        <timeline-list v-if="isExistMicroposts" :microposts="microposts"></timeline-list>
-        <div class="text-center" v-else>
-            一件もありません
-        </div>
-    </div>
+    <v-container>
+        <v-row>
+            <v-col>
+                <div>
+                    <div class="mb-5" v-if="$store.getters['auth/currentUser']">
+                        <micropost-form @created="createMicropost"></micropost-form>
+                    </div>
+                    <timeline-list v-if="isExistMicroposts" :microposts="microposts"></timeline-list>
+                    <div class="text-center" v-else>
+                        一件もありません
+                    </div>
+                </div>
+            </v-col>
+        </v-row>
+    </v-container>
 </template> 
 
 <script>
