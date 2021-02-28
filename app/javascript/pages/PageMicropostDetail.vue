@@ -15,7 +15,7 @@
                 <v-btn icon @click="openEditMicropost">
                     <v-icon color="green lighten-1">mdi-pen</v-icon>
                 </v-btn>
-                <v-btn icon>
+                <v-btn icon @click="deleteMicropost">
                     <v-icon color="error lighten-1">mdi-delete</v-icon>
                 </v-btn>
             </v-list-item-action>
@@ -59,6 +59,12 @@
                 await axios.patch(`/api/microposts/${this.micropostId}`, { micropost: { content: micropostContent } })
                 this.$refs.dialog.close()
                 this.micropost.content = micropostContent
+              },
+            async deleteMicropost() {
+                if(confirm("削除しますか？")) {
+                    await axios.delete(`/api/microposts/${this.micropostId}`)
+                    this.$router.push(`/microposts`)
+                }
             }
         }
     }
