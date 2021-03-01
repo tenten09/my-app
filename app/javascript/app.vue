@@ -13,9 +13,17 @@
             <v-list-item-title>ホーム</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link v-if="$store.getters['auth/currentUser']">
+        <v-list-item to="/profile" link v-if="$store.getters['auth/currentUser']">
           <v-list-item-action>
             <v-icon>mdi-account</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>プロフィール</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link v-if="$store.getters['auth/currentUser']">
+          <v-list-item-action>
+            <v-icon>mdi-logout</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title @click="logout">ログアウト</v-list-item-title>
@@ -34,18 +42,18 @@
 
     <v-app-bar
             app
-            color="indigo"
+            color="green"
             dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>情報共有</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
       <router-view></router-view>
     </v-main>
     <v-footer
-            color="indigo"
+            color="green"
             app
     >
       <span class="white--text">&copy; 2021</span>
