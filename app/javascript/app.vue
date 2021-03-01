@@ -42,18 +42,18 @@
 
     <v-app-bar
             app
-            color="indigo"
+            color="green"
             dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>情報共有</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
       <router-view></router-view>
     </v-main>
     <v-footer
-            color="indigo"
+            color="green"
             app
     >
       <span class="white--text">&copy; 2021</span>
