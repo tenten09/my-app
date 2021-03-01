@@ -6,7 +6,7 @@ import PageUserLogin from '@/pages/PageUserLogin'
 import PageTimeline from '@/pages/PageTimeline'
 import PageMicropostDetail from '@/pages/PageMicropostDetail'
 import PageProfile from '@/pages/PageProfile'
-import PageMyAccountProfile from '@/pages/PageMyAccountProfile'
+
 const router = new VueRouter({
     routes: [
         { path: '/signup', component: PageUserRegister, name: 'user-register' },
