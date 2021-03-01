@@ -13,7 +13,7 @@
             <v-list-item-title>ホーム</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-         <v-list-item :to="`/users/${$store.getters['auth/currentUser'].id}`" link v-if="$store.getters['auth/currentUser']">
+        <v-list-item to="/profile" link v-if="$store.getters['auth/currentUser']">
           <v-list-item-action>
             <v-icon>mdi-account</v-icon>
           </v-list-item-action>
