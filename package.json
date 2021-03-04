@@ -19,5 +19,11 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.2"
+  },
+  "engines": {
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "postinstall": "cd ./frontend && yarn && yarn run webpack --config ./webpack.config.js --mode production"
   }
 }
