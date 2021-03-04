@@ -16,9 +16,6 @@ Vue.use(Vuetify)
 const vuetify = new Vuetify();
 import router from '@/router'
 import store from '@/store'
-const token = document.getElementsByName("csrf-token")[0].getAttribute("content");
-axios.defaults.headers.common["X-CSRF-Token"] = token;
-
 document.addEventListener('DOMContentLoaded', () => {
     const app = new Vue({
         vuetify,
