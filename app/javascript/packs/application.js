@@ -8,6 +8,9 @@ require("@rails/activestorage").start()
 require("channels")
 require("plugins/dayjs")
 
+//= require jquery3
+//= require jquery_ujs
+
 import Vue from 'vue'
 import App from '../app.vue'
 import Vuetify from 'vuetify'
