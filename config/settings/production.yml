@@ -1,2 +1,2 @@
-cookie_domain: 'https://git.heroku.com/my-app09'
+cookie_domain: 'https://my-app09.herokuapp.com'
 base_domain: 'localhost.local:3000'
