@@ -1,6 +1,6 @@
 class Api::MicropostsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :authenticate, only: %i[create update destroy]
+  # before_action :authenticate, only: %i[create update destroy]
 
   def index
     microposts = Micropost.includes(:user).order(created_at: :desc)
