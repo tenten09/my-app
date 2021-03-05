@@ -1,0 +1,2 @@
+cookie_domain: 'localhost.local'
+ base_domain: 'localhost.local:3000'
