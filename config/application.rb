@@ -11,9 +11,6 @@ module MyApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    config.session_store :cookie_store, domain: Settings['base_domain']
-    config.session_store :cookie_store, domain: Settings['cookie_domain']
-
     if Rails.env.development? || Rails.env.test?
       Bundler.require(*Rails.groups)
       Dotenv::Railtie.load
