@@ -56,6 +56,9 @@
                 return this.micropostContent.length > 0 && this.micropostContent.length <= 140
             }
         },
+        axios: {
+            baseURL: 'https://my-app09.herokuapp.com'
+        },
         methods: {
             open() {
                 this.dialog = true;
