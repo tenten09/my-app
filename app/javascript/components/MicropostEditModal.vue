@@ -59,12 +59,15 @@
         methods: {
             open() {
                 this.dialog = true;
+                console.log(response.data)
             },
             close() {
                 this.dialog = false;
+                console.log(response.data)
             },
             update() {
                 this.$emit('update', this.micropostContent)
+                console.log(response.data)
             }
         }
     }

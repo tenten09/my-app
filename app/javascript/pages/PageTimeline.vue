@@ -42,6 +42,7 @@
             async fetchMicroposts() {
                 const res = await axios.get(`/api/microposts`)
                 this.microposts = res.data.microposts
+                console.log(response.data)
             },
             async createMicropost(micropostContent) {
                 const micropostParams = {

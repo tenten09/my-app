@@ -28,8 +28,10 @@
         },
         methods: {
             createMicropost() {
+                console.log(this.$route)
                 this.$emit('created', this.micropostContent)
                 this.micropostContent = ""
+                console.log(response.data)
             }
         }
     }
