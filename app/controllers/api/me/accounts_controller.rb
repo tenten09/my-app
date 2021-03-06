@@ -1,5 +1,6 @@
 class Api::Me::AccountsController < ApplicationController
-  before_action :authenticate
+  skip_before_action :verify_authenticity_token
+  # before_action :authenticate
 
   def update
     current_user.update(user_params)
