@@ -64,6 +64,7 @@
             async fetchMicropost() {
                 const res = await axios.get(`/api/microposts/${this.micropostId}`)
                 this.micropost = res.data.micropost
+                console.log(res.data);
             },
             openEditMicropost() {
                 this.$refs.dialog.open()

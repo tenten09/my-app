@@ -56,21 +56,15 @@
                 return this.micropostContent.length > 0 && this.micropostContent.length <= 140
             }
         },
-        axios: {
-            baseURL: 'https://my-app09.herokuapp.com'
-        },
         methods: {
             open() {
                 this.dialog = true;
-                console.log(response.data)
             },
             close() {
                 this.dialog = false;
-                console.log(response.data)
             },
             update() {
                 this.$emit('update', this.micropostContent)
-                console.log(response.data)
             }
         }
     }

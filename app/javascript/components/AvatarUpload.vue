@@ -23,9 +23,6 @@
       components: {
           AvatarUpload
       },
-      axios: {
-            baseURL: 'https://my-app09.herokuapp.com'
-        },
       methods: {
           toggleShow() {
               this.show = !this.show;

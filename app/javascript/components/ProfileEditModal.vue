@@ -39,9 +39,6 @@
         created() {
             this.user = { ...this.$store.getters['auth/currentUser']}
         },
-        axios: {
-            baseURL: 'https://my-app09.herokuapp.com'
-        },
         methods: {
           open() {
                 this.dialog = true;

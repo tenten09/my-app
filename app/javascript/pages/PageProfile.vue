@@ -112,6 +112,7 @@
           if (this.isMe) return
           const res = await axios.get(`/api/users/${this.userId}`)
           this.targetUser = res.data.user
+          console.log(res.data);
       },
   }
 </script>
