@@ -13,9 +13,8 @@ class Api::MicropostsController < ApplicationController
   end
 
   def create
+    logger.info "current_user: #{current_user.attributes.inspect}"
     micropost = current_user.microposts.create!(micropost_params)
-    logger.debug(micropost.inspect)
-    # logger.debug "micropost: #{micropost.attributes.inspect}"
     render json: micropost, serializer: MicropostSerializer
   end
 
