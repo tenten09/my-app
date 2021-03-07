@@ -15,6 +15,7 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default  {
         data() {
             return {
@@ -28,9 +29,24 @@
         },
         methods: {
             createMicropost() {
+                axios.get(`/`)
+                .then(res => {
+                console.log(res.data)
+                })
                 this.$emit('created', this.micropostContent)
                 this.micropostContent = ""
-            }
+            },
+        // fetch() {
+        //   axios.get(`/api/users/${this.userId}`)
+        //     .then(res => {
+        //       console.log(res.data)
+        //     })
+        //   },
+        //   async createMicropost() {
+        //     const res = await fetch(`/`);
+        //     // const json = await res.json();
+        //     console.log(res.data)
+        //     }
         }
     }
 </script> 
