@@ -114,5 +114,16 @@
           this.targetUser = res.data.user
           console.log(res.data);
       },
+      mounted() {
+      this.fetch()
+      },
+      methods: {
+        fetch() {
+          axios.get(`/api/users/${this.userId}`)
+            .then(res => {
+              console.log(res.data)
+            })
+          }
+      }
   }
 </script>
