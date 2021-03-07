@@ -29,7 +29,7 @@
         },
         methods: {
             createMicropost() {
-                axios.get(`/`)
+                axios.get(`/api/microposts`)
                 .then(res => {
                 console.log(res.data)
                 })
