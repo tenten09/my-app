@@ -27,12 +27,17 @@
                 return this.micropostContent.length > 0 && this.micropostContent.length <= 140
             }
         },
+        mounted() {
+      this.fetch()
+      },
         methods: {
-            createMicropost() {
-                axios.get(`/api/microposts`)
+            fetch() {
+            axios.get(`/`)
                 .then(res => {
-                console.log(res.data)
+                console.log(res)
                 })
+            },
+            createMicropost() {
                 this.$emit('created', this.micropostContent)
                 this.micropostContent = ""
             },
