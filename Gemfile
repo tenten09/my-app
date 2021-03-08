@@ -44,6 +44,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'dotenv-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
