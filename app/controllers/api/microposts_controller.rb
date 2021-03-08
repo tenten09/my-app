@@ -35,8 +35,4 @@ class Api::MicropostsController < ApplicationController
   def micropost_params
     params.require(:micropost).permit(:content)
   end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:id])
-  end    
 end
