@@ -6,6 +6,7 @@ module Jwt::UserAuthenticator
     begin
       payload, _ = Jwt::TokenDecryptor.(token)
       return User.find(payload['user_id'])
+      logger.info(current_user.inspect)
     rescue
       return nil
     end
