@@ -27,26 +27,11 @@
                 return this.micropostContent.length > 0 && this.micropostContent.length <= 140
             }
         },
-        mounted() {
-      this.fetch()
-      },
         methods: {
-            fetch() {
-            axios.get(`/`)
-                .then(res => {
-                console.log(res)
-                })
-            },
             createMicropost() {
                 this.$emit('created', this.micropostContent)
                 this.micropostContent = ""
             },
-        // fetch() {
-        //   axios.get(`/api/users/${this.userId}`)
-        //     .then(res => {
-        //       console.log(res.data)
-        //     })
-        //   },
         //   async createMicropost() {
         //     const res = await fetch(`/`);
         //     // const json = await res.json();
