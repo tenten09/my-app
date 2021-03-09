@@ -6,7 +6,6 @@ module Jwt::TokenDecryptor
   end
 
   private
-
   def decrypt(token)
     begin
       JWT.decode(token, Rails.application.credentials.secret_key_base)
@@ -15,4 +14,5 @@ module Jwt::TokenDecryptor
     end
   end
 end
+
 class InvalidTokenError < StandardError; end; 
