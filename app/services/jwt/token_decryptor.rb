@@ -9,9 +9,9 @@ module Jwt::TokenDecryptor
 
   def decrypt(token)
     JWT.decode(token, Rails.application.credentials.secret_key_base)
-  rescue StandardError => e 
-    puts e.backtrace
-    raise InvalidTokenError
+  rescue => e 
+    puts e
+    raise e
   end
 end
 class InvalidTokenError < StandardError; end
