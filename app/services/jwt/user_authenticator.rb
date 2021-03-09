@@ -4,7 +4,7 @@ module Jwt::UserAuthenticator
   def call(request_headers)
     @request_headers = request_headers
     begin
-      payload, _ = Jwt::TokenDecryptor.(token)
+      payload, = Jwt::TokenDecryptor.(token)
       # logger.info(payload.inspect)
       return User.find(payload['user_id'])
       logger.info(user.inspect)
