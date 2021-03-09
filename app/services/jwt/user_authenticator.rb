@@ -9,7 +9,7 @@ module Jwt::UserAuthenticator
       User.find(payload['user_id'])
       # logger.info(user.inspect)
     rescue => e
-      puts e.backtrace
+      puts e
     end
   end
 
