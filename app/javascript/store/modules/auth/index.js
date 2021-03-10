@@ -12,6 +12,7 @@ const mutations = {
         state.currentUser = user;
         localStorage.setItem('currentUser', JSON.stringify(user))
         axios.defaults.headers.common['Authorization'] = `Bearer ${user.token}`
+        console.log(user.token)
     },
     CLEAR_CURRENT_USER: () => {
         state.currentUser = null
