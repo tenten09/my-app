@@ -10,7 +10,7 @@ module Jwt::TokenDecryptor
   def decrypt(token)
     JWT.decode(token, Rails.application.credentials.secret_key_base)
   rescue => e 
-    puts e
+    puts Rails.application.credentials.secret_key_base
     raise e
   end
 end
