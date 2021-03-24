@@ -49,6 +49,76 @@
       <v-toolbar-title>情報共有</v-toolbar-title>
     </v-app-bar>
 
+  <template>
+    <v-card>
+      <v-toolbar
+        color="cyan"
+        dark
+        flat
+      >
+       
+        <v-spacer></v-spacer>
+
+        <template v-slot:extension>
+          <v-tabs
+            v-model="tab"
+            align-with-title
+          >
+          <v-tabs-slider color="yellow"></v-tabs-slider>
+            <v-tab 
+              :key="item1"
+              to="/"
+            >
+              {{ item1 }}
+            </v-tab>
+
+             <v-tab 
+              :key="item2"
+              to="/posts"
+            >
+              {{ item2 }}
+            </v-tab>
+
+            <v-tab 
+              :key="item3"
+              to="/profile"
+            >
+              {{ item3 }}
+            </v-tab>
+
+          </v-tabs>
+        </template>
+      </v-toolbar>
+
+      <v-tabs-items v-model="tab">
+        <v-tab-item>
+          <v-card flat>
+            <v-card-text v-text="text"></v-card-text>
+          </v-card>
+        </v-tab-item>
+      
+        <v-tab-item>
+          <v-card flat>
+            <v-card-text v-text="text1"></v-card-text>
+          </v-card>
+        </v-tab-item>
+
+        <v-tab-item>
+          <v-card flat>
+            <v-card-text v-text="text2"></v-card-text>
+          </v-card>
+        </v-tab-item>
+    
+        <v-tab-item>
+          <v-card flat>
+            <v-card-text v-text="text3"></v-card-text>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
+
+    </v-card>
+  </template>
+
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -66,9 +136,19 @@
     props: {
       source: String,
     },
-    data: () => ({
-      drawer: null,
-    }),
+    data () {
+      return {
+        drawer: null,
+        tab: null,
+        item1: 'share',
+        item2: 'warehouse',
+        item3: 'driver',
+        text: '共通の情報共有',
+        text1: '倉庫に関する情報共有',
+        text2: '配車状況に関する情報共有',
+        text3: 'ニュース',
+      }
+    },
     methods: {
       logout() {
         if (confirm("ログアウトしますか？")) {
