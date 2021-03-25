@@ -81,7 +81,7 @@
 
             <v-tab 
               :key="item3"
-              to="/profile"
+              to="/profile" link v-if="$store.getters['auth/currentUser']"
             >
               {{ item3 }}
             </v-tab>
