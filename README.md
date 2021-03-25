@@ -1,24 +1,33 @@
-# README
+### アプリケーション概要
+社内での情報共有ツールとなります。  
+このアプリを使えば、社内での移動、電話等の無駄が省けます。  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+前職では、物流の事務仕事をしていたが、かなりのアナログ環境であり、
+  情報共有には、口頭で伝えたり、電話を用いていてコミュニケーションを撮っていました。  
 
-Things you may want to cover:
+しかし、物流系は業務上、席を外すことや、外部と電話をすることが非常に多い。  
+例えば  
+・現場へ出向き積み込みの確認  
+・車両の安全確認  
+・ドライバーへ注意事項等を対面で教育  
+・他支店との、配車状況の共有  
+・ドライバーの到着確認  
+・注意事項等の確認  
+など、担当者に伝えたいことがあっても伝えられるタイミングがなかったりする。  
+ 
+その中で、社内での情報共有ツールが必要だと感じた。  
 
-* Ruby version
+様々な、コミュニケーションツールがあるが、
+直感的に使用できる、こっちを使う方が楽だと認識してもらえるようにデザインを工夫しました。
 
-* System dependencies
+### アプリケーション利用方法
+[Googleを見る][Google]
+[Google]: https://my-app09.herokuapp.com/#/  
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### テスト用アカウント
+すでにログインされている状態にしてありますが、  
+ログインされていない場合、  
+email: tanaka@example.com  
+password: passwordを用意してあります。  
+お手数ですが、よろしくお願い致します！  
