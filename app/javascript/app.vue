@@ -52,7 +52,7 @@
   <template>
     <v-card>
       <v-toolbar
-        color="cyan"
+        color="light-green"
         dark
         flat
       >
@@ -85,7 +85,6 @@
             >
               {{ item3 }}
             </v-tab>
-
           </v-tabs>
         </template>
       </v-toolbar>
@@ -106,12 +105,6 @@
         <v-tab-item>
           <v-card flat>
             <v-card-text v-text="text2"></v-card-text>
-          </v-card>
-        </v-tab-item>
-    
-        <v-tab-item>
-          <v-card flat>
-            <v-card-text v-text="text3"></v-card-text>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
@@ -140,13 +133,12 @@
       return {
         drawer: null,
         tab: null,
-        item1: 'share',
-        item2: 'warehouse',
-        item3: 'driver',
+        item1: '共通業務',
+        item2: '車両手配・ドライバー',
+        item3: 'プロフィール',
         text: '共通の情報共有',
         text1: '倉庫に関する情報共有',
         text2: '配車状況に関する情報共有',
-        text3: 'ニュース',
       }
     },
     methods: {

@@ -4,7 +4,7 @@
                 outlined
                 color="indigo"
                 name="input-7-4"
-                label="投稿"
+                label="車両専用投稿"
                 v-model="postContent"
                 prepend-icon="mdi-comment"
         ></v-textarea>

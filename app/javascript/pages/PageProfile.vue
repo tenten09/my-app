@@ -91,6 +91,8 @@
       data() {
           return {
               targetUser: null,
+              tab: null,
+              text: 'aaaaaaaaaaあ',
           }
       },
       components: {
