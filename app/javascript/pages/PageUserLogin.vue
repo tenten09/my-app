@@ -18,7 +18,7 @@
                             <v-text-field
                                     v-model="email"
                                     :rules="emailRules"
-                                    label="E-mail"
+                                    label="メールアドレス"
                                     required
                                     prepend-icon="mdi-email"
                             ></v-text-field>
@@ -26,7 +26,7 @@
                             <v-text-field
                                     v-model="password"
                                     :rules="passwordRules"
-                                    label="Password"
+                                    label="パスワード"
                                     required
                                     prepend-icon="mdi-lock"
                                     type="password"
@@ -54,13 +54,13 @@
         computed: {
             emailRules() {
                 return [
-                    v => !!v || 'E-mail is required',
-                    v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+                    v => !!v || 'メールアドレスの入力が必要です',
+                    v => /.+@.+\..+/.test(v) || 'メールアドレスが正しくありません',
                 ]
             },
             passwordRules() {
                 return [
-                    v => !!v || 'Password is required',
+                    v => !!v || 'パスワードの入力が必要です',
                 ]
             },
         },
